@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
 public enum States {
+    PRE_MAIN_MENU("-a", "Retour au menu principal"),
     MAIN_MENU("a", "Menu principal"),
 
     PLAGE_MANAGEMENT("b","Gestion des plages"),
