@@ -12,9 +12,12 @@ public enum States {
     ADMIN_MANAGEMENT("d", "Administration"),
 
     PLAGE_ADDING("b1", "Ajout de plage(s)"),
+    PLAGE_ADDING_ACTIVITY("b11", "Ajout de plage(s)"),
+    PLAGE_LISTING_ACTIVITY("b13", "Liste des plages"),
     PLAGE_DELETING("b2", "Suppression de plage(s)"),
     PLAGE_EDIT("b3", "Edition d'une plage"),
     PLAGE_LISTING("b4", "Liste des plages"),
+
 
     PEOPLE_ADDING("c1", "Ajout d'un participant"),
     PEOPLE_DELETING("c2", "Suppression"),
