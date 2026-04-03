@@ -16,8 +16,12 @@ public enum States {
     PLAGE_LISTING_ACTIVITY("b13", "Liste des plages"),
     PLAGE_DELETING("b2", "Suppression de plage(s)"),
     PLAGE_EDIT("b3", "Edition d'une plage"),
-    PLAGE_LISTING("b4", "Liste des plages"),
-
+    PLAGE_EDIT_ACTIVITY("b31", "Edition d'une plage"),
+    PLAGE_LOADING("b4", "chargement des plages"),
+    PLAGE_LOADING_ACTIVITY_A("b411", "loading par objets"),
+    PLAGE_LOADING_ACTIVITY_B("b412", "loading par log text"),
+    PLAGE_SAVING_ACTIVITY("b5", "sauvegarde des plages"),
+    PLAGE_LISTING("b6", "Liste des plages"),
 
     PEOPLE_ADDING("c1", "Ajout d'un participant"),
     PEOPLE_DELETING("c2", "Suppression"),

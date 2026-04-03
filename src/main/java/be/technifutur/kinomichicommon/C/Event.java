@@ -20,7 +20,15 @@ public record Event(Object sender, String eventType) {
         return new Event(sender, "add");
     }
 
+    public static Event createNavEvent(Object sender) {
+        return new Event(sender, "nav");
+    }
+
     public static Event createRemoveEvent(Object sender) {
         return new Event(sender, "remove");
+    }
+
+    public static Event createModifyEvent(Object sender) {
+        return new Event(sender, "modify");
     }
 }
