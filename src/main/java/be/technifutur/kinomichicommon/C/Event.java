@@ -1,34 +1,58 @@
 package be.technifutur.kinomichicommon.C;
 
-public record Event(Object sender, String eventType) {
+public record Event(Object sender, EventType eventType) {
 
     // Compact constructor with validation (Java 16+)
     public Event {
         java.util.Objects.requireNonNull(sender, "sender cannot be null");
         java.util.Objects.requireNonNull(eventType, "eventType cannot be null");
-        if (eventType.isBlank()) {
-            throw new IllegalArgumentException("eventType cannot be blank");
-        }
+
     }
 
     // Static factory methods for common event types
     public static Event createSaveEvent(Object sender) {
-        return new Event(sender, "save");
+        return new Event(sender, EventType.SAVE);
     }
 
-    public static Event createAddEvent(Object sender) {
-        return new Event(sender, "add");
+
+    public static Event createLockEvent(Object sender) {
+        return new Event(sender, EventType.LOCK);
+    }
+
+    public static Event createUnlockEvent(Object sender) {
+        return new Event(sender, EventType.UNLOCK);
     }
 
     public static Event createNavEvent(Object sender) {
-        return new Event(sender, "nav");
+        return new Event(sender, EventType.NAVIGATE);
     }
 
-    public static Event createRemoveEvent(Object sender) {
-        return new Event(sender, "remove");
+    public enum Topic{
+        LOCK,
+        NAVIGATION,
+        PERSISTANCE
     }
 
-    public static Event createModifyEvent(Object sender) {
-        return new Event(sender, "modify");
+    public enum EventType{
+        NAVIGATE("navigate"),
+        LOCK("lock"),
+        UNLOCK("unlock"),
+        SAVE("save"),
+        SAVING("saving"),
+        CHANGED("changed"),
+        SAVED("saved"),
+        LOADING("loading"),
+        PENDING("pending"),
+        LOADED("loaded");
+
+        private final String name;
+
+        EventType(String name){
+            this.name = name;
+        }
+
+        public String getName(){
+            return name;
+        }
     }
 }
