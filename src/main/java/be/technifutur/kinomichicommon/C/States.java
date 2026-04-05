@@ -11,19 +11,23 @@ public enum States {
     PEOPLE_MANAGEMENT("c","Gestion des participants"),
     ADMIN_MANAGEMENT("d", "Administration"),
 
-    PLAGE_ADDING("b1", "Ajout de plage(s)"),
-    PLAGE_DELETING("b2", "Suppression de plage(s)"),
-    PLAGE_EDIT("b3", "Edition de plage"),
-    PLAGE_LOADING("b4", "chargement des plages"),
-    PLAGE_LOADING_A("b41", "loading d'une sauvegarde"),
-    PLAGE_LOADING_B("b42", "loading via un log"),
-    PLAGE_SAVING("b5", "sauvegarde des plages"),
-    PLAGE_LISTING("b6", "Liste des plages"),
+    PLAGE_ADDING("b1", "Ajout de plages"),
+    PLAGE_DELETING("b2", "Suppression de plages"),
+    PLAGE_EDIT("b3", "Edition de plages"),
+    PLAGE_LOADING("b4", "Chargement de plages"),
+    PLAGE_LOADING_A("b41", "Chargement d'une sauvegarde"),
+    PLAGE_LOADING_B("b42", "Chargement par log text"),
+    PLAGE_SAVING("b5", "Sauvegarde des plages"),
+    PLAGE_LISTING("b6", "Listing des plages"),
 
-    PEOPLE_ADDING("c1", "Ajout d'un participant"),
-    PEOPLE_DELETING("c2", "Suppression"),
-    PEOPLE_EDIT("c3", "Edition d'un participant"),
-    PEOPLE_LISTING("c4", "Liste des participants");
+    PEOPLE_ADDING("c1", "Ajout de participants"),
+    PEOPLE_DELETING("c2", "Suppression de participants"),
+    PEOPLE_EDIT("c3", "Edition de participants"),
+    PEOPLE_LOADING("c4","Chargement de participants"),
+    PEOPLE_LOADING_A("c41","Chargement d'une sauvegarde"),
+    PEOPLE_LOADING_B("c42","Chargement par log text"),
+    PEOPLE_SAVING("c5", "Sauvegarde des participants"),
+    PEOPLE_LISTING("c6", "Listing des participants");
 
     private final String value;
     private final String label;
