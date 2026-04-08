@@ -4,7 +4,7 @@ import java.beans.Transient;
 import java.io.Serializable;
 import java.util.List;
 
-public interface GroupManaging<T, B> extends Serializable {
+public interface GroupManaging<T extends HasId, B> extends Serializable {
     @Transient
     void addItem(B building);
 

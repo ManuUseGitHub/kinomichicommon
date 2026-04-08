@@ -1,9 +1,11 @@
 package be.technifutur.kinomichicommon.C;
 
+import be.technifutur.kinomichicommon.interfaces.HasName;
+
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
-public enum States {
+public enum States implements HasName {
     PRE_MAIN_MENU("-a", "Retour au menu principal"),
     MAIN_MENU("a", "Menu principal"),
 
@@ -49,5 +51,10 @@ public enum States {
 
     public String getValue() {
         return value;
+    }
+
+    @Override
+    public String getName() {
+        return label;
     }
 }

@@ -27,6 +27,10 @@ public record Event(Object sender, EventType eventType) {
         return new Event(sender, EventType.NAVIGATE);
     }
 
+    public static Event createBackNavEvent(Object sender) {
+        return new Event(sender, EventType.BACK_NAVIGATE);
+    }
+
     public enum Topic{
         LOCK,
         NAVIGATION,
@@ -35,6 +39,7 @@ public record Event(Object sender, EventType eventType) {
 
     public enum EventType{
         NAVIGATE("navigate"),
+        BACK_NAVIGATE("back navigate"),
         LOCK("lock"),
         UNLOCK("unlock"),
         SAVE("save"),
